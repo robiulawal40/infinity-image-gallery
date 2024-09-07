@@ -1,0 +1,9 @@
+.wppg-grid-item img:hover{
+    opacity: .8;
+}
+.item-description{
+display: none;
+}
+.wppg-grid-wrapper{
+    /* background: #DDD; */
+}
