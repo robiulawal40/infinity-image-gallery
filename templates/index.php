@@ -4,13 +4,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Infinity Image Gallery</title>
 	<link rel="stylesheet" href="./tailwind-style.css">
-	<!-- <script src="./isotope.pkgd.min.js"></script> -->
-	<!-- <link type="text/css" rel="stylesheet" href="./dist/css/lightgallery-bundle.css" /> -->
-
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-
-<link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
 
 
 </head>

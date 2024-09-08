@@ -1,0 +1,61 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinity Image Gallery</title>
+    <link rel="stylesheet" href="./tailwind-style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"
+    ></script>
+  </head>
+  <body class="bg-slate-100">
+    <div id="infinity-gallery" class="">
+      <a href="./images/alex-lvrs-HDjExSGuWUw-unsplash.jpg"
+        ><img
+          loading="lazy"
+          decoding="async"
+          alt=""
+          src="./images/alex-lvrs-HDjExSGuWUw-unsplash.jpg"
+          srcset=""
+      /></a>
+      <a href="./images/alex-lvrs-HDjExSGuWUw-unsplash.jpg"
+        ><img
+          loading="lazy"
+          decoding="async"
+          alt=""
+          src="./images/alex-lvrs-HDjExSGuWUw-unsplash.jpg"
+          srcset=""
+      /></a>
+    </div>
+
+    <script type="text/javascript">
+      $("#infinity-gallery").nanogallery2({
+        itemsBaseURL: "",
+        thumbnailHeight: 200,
+        thumbnailWidth: 300,
+        thumbnailBorderVertical: 0,
+        thumbnailBorderHorizontal: 0,
+        galleryDisplayMode: "moreButton",
+        thumbnailHoverEffect2: "imageScale150|toolsSlideDown|labelAppear75",
+        colorScheme: {
+          thumbnail: {
+            background: "rgba(217,217,217,1)",
+          },
+        },
+        thumbnailDisplayTransitionDuration: 10,
+        thumbnailGutterWidth: 10,
+        thumbnailGutterHeight: 10,
+      });
+    </script>
+  </body>
+</html>
