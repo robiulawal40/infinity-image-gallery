@@ -37,6 +37,15 @@ You can display your media content in a responsive lightbox that comes with 15 s
 
 The Wordpress Infinite Gallery plugin allows you to create unlimited shortcode for every gallery. You can set setting for every shortcode separately.
 
+= EXAMPLES =
+
+[Style 1](https://robiulawal40.github.io/infinity-image-gallery/templates/index-1.html)
+[Style 2](https://robiulawal40.github.io/infinity-image-gallery/templates/index-2.html)
+[Style 3](https://robiulawal40.github.io/infinity-image-gallery/templates/index-3.html)
+[Style 4](https://robiulawal40.github.io/infinity-image-gallery/templates/index-4.html)
+[Style 5](https://robiulawal40.github.io/infinity-image-gallery/templates/index-5.html)
+
+
 ###IMPORTANT:
 Please visit our support section if you believe you have discovered a bug in Wordpress Infinite Gallery or if you have any problems or questions about the plugin.
 
