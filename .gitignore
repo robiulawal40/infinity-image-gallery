@@ -7,7 +7,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
-package.json
+# package.json
 svn.js
 **/node_modules/**
 **/test/**

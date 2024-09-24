@@ -118,17 +118,27 @@ if ( ! class_exists( 'WP_Infinite_Gallery' ) ) :
 			// add_action( 'admin_init', array( $this, 'register_plugin_settings' ) );
 			// }
 			add_action( 'init', array( $this, 'register_scripts' ) );
-			add_action( 'wp_enqueue_scripts', array( $this, 'load_scripts' ) );
+			add_action( 'wp_enqueue_scripts', array( $this, 'load_styles' ) );
 			add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
 		}
 
 		public function register_scripts() {
+
+			/*New versions*/
+			wp_register_script( 'nanogallery2-min', WPIGURL . 'templates/assets/jquery.nanogallery2.min.js', array( 'jquery' ), WPIG_VERSION, true );
+			wp_register_script( 'nanogallery2-starter', WPIGURL . 'templates/assets/nanogallery2.starter.js', array( 'nanogallery2-min', 'jquery' ), WPIG_VERSION, true );
+
+			/*Old versions*/
+			wp_register_script( 'images-loaded', WPIGURL . 'assets/imagesloaded.pkgd.min.js', array(), WPIG_VERSION, true );
+			wp_register_script( 'iso', WPIGURL . 'assets/isotope.pkgd.min.js', array( 'images-loaded' ), WPIG_VERSION, true );
+			wp_register_script( 'infinite-scroll', WPIGURL . 'assets/infinite-scroll.pkgd.min.js', array(), WPIG_VERSION, true );
+			wp_register_script( 'wpig-scripts', WPIGURL . 'assets/scripts.js', array( 'jquery', 'iso', 'infinite-scroll' ), WPIG_VERSION, true );
 		}
 
 		/**
 		 * @return null
 		 */
-		public function load_scripts() {
+		public function load_styles() {
 
 			global $post, $wpdb;
 
@@ -136,27 +146,14 @@ if ( ! class_exists( 'WP_Infinite_Gallery' ) ) :
 				return;
 			}
 			wp_enqueue_style( 'wpig-style', WPIGURL . 'assets/style.css', array(), WPIG_VERSION );
-			wp_register_style( 'wpig-style-1', WPIGURL . 'assets/style-1.css', array(), WPIG_VERSION );
-			wp_register_style( 'wpig-style-2', WPIGURL . 'assets/style-2.css', array(), WPIG_VERSION );
+			wp_enqueue_style( 'wpig-style-1', WPIGURL . 'assets/style-1.css', array(), WPIG_VERSION );
+			wp_enqueue_style( 'wpig-style-2', WPIGURL . 'assets/style-2.css', array(), WPIG_VERSION );
 
 			/** For Style 3 */
-			wp_register_style( 'wpig-style-3', WPIGURL . 'templates/tailwind-style.css', array(), WPIG_VERSION );
+			wp_enqueue_style( 'wpig-style-3', WPIGURL . 'templates/tailwind-style.css', array(), WPIG_VERSION );
 
 			/** Nano Gallery */
-			wp_register_style( 'nanogallery2', WPIGURL . 'templates/assets/nanogallery2.min.css', array(), WPIG_VERSION );
-			wp_register_script( 'nanogallery2-min', WPIGURL . 'templates/assets/jquery.nanogallery2.min.js', array(), WPIG_VERSION, true );
-			wp_register_script( 'nanogallery2-starter', WPIGURL . 'templates/assets/nanogallery2.starter.js', array( 'nanogallery2-min', 'jquery' ), WPIG_VERSION, true );
-
-			// $custom_css = "
-			// .mycolor{
-			// background: '#333';
-			// }";
-			// wp_add_inline_style( 'wpig-style', $custom_css );
-
-			wp_enqueue_script( 'images-loaded', WPIGURL . 'assets/imagesloaded.pkgd.min.js', array(), WPIG_VERSION, true );
-			wp_enqueue_script( 'iso', WPIGURL . 'assets/isotope.pkgd.min.js', array( 'images-loaded' ), WPIG_VERSION, true );
-			wp_enqueue_script( 'infinite-scroll', WPIGURL . 'assets/infinite-scroll.pkgd.min.js', array(), WPIG_VERSION, true );
-			wp_register_script( 'wpig-scripts', WPIGURL . 'assets/scripts.js', array( 'jquery', 'iso', 'infinite-scroll' ), WPIG_VERSION, true );
+			wp_enqueue_style( 'nanogallery2', WPIGURL . 'templates/assets/nanogallery2.min.css', array(), WPIG_VERSION );
 		}
 		/**
 		 * @param $hook

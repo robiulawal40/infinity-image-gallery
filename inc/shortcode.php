@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 class WPIG_ShortCode {
 
-	public $style, $image_per_request, $orderby, $order, $post_id, $enable_infinite_scroll, $select_attachment_size, $end_content_text;
+	public $options, $style, $image_per_request, $orderby, $order, $post_id, $enable_infinite_scroll, $select_attachment_size, $end_content_text;
 
 	public function __construct() {
 		add_shortcode( 'wpig', array( $this, 'wpig_shortcode_init' ) );
@@ -31,7 +31,7 @@ class WPIG_ShortCode {
 			// 'post_in'  => array_values( $attachment_ids ),
 			'post__in'       => array_values( $attachment_ids ),
 			// 'per_page' => $this->image_per_request,
-			'posts_per_page' => $this->image_per_request,
+			'posts_per_page' => $this->style == 'style-3' ? -1 : $this->image_per_request,
 			'orderby'        => $this->orderby, // title
 			'order'          => $this->order, // 'DESC'
 			'paged'          => $paged,
@@ -42,6 +42,8 @@ class WPIG_ShortCode {
 		}
 
 		if ( $this->style == 'style-3' ) {
+			// Enqueue Only Scripts that will load on Footer
+
 			$attachments_html = $this->wpig_prepare_attachment_html_new( $attachments );
 		}
 
@@ -54,39 +56,41 @@ class WPIG_ShortCode {
 	 */
 	public function set_settings( $post_id ) {
 		$this->post_id = $post_id;
+		$this->options = array();
 
 		include_once WPIGDIR . 'admin/options-array.php';
-		foreach ( $options as $key => $option ) {
-			$id = $option['id'];
-			if ( metadata_exists( 'post', $this->post_id, $id ) ) {
+		if ( isset( $options ) ) {
+			foreach ( $options as $key => $option ) {
+				$id = $option['id'];
+				if ( metadata_exists( 'post', $this->post_id, $id ) ) {
 
-				$this->{$id} = get_post_meta( $this->post_id, $id, true );
-			} else {
-				$this->{$id} = $option['std'];
+					$this->{$id}          = get_post_meta( $this->post_id, $id, true );
+					$this->options[ $id ] = get_post_meta( $this->post_id, $id, true );
+				} else {
+					$this->{$id}          = $option['std'];
+					$this->options[ $id ] = $option['std'];
 
+				}
 			}
 		}
 		wp_localize_script( 'wpig-scripts', 'WPIG', array( 'enable_infinite_scroll' => $this->enable_infinite_scroll ) );
+		wp_localize_script(
+			'nanogallery2-starter',
+			'WPIGNEW',
+			array(
+				'enable_infinite_scroll' => $this->enable_infinite_scroll,
+				'options'                => $this->options,
+			)
+		);
 		if ( $this->style == 'style-1' ) {
-			wp_enqueue_style( 'wpig-style-1' );
 			wp_enqueue_script( 'wpig-scripts' );
 		}
 		if ( $this->style == 'style-2' ) {
-			wp_enqueue_style( 'wpig-style-2' );
 			wp_enqueue_script( 'wpig-scripts' );
 		}
 		if ( $this->style == 'style-3' ) {
-			wp_enqueue_style( 'wpig-style-3' );
-			wp_enqueue_style( 'nanogallery2' );
 			wp_enqueue_script( 'nanogallery2-min' );
 			wp_enqueue_script( 'nanogallery2-starter' );
-			wp_localize_script( 'nanogallery2-starter', 'WPIGS', array( 'enable_infinite_scroll' => $this->enable_infinite_scroll ) );
-
-			/** Deenqueue Scripts */
-			// wp_dequeue_script( 'wpig-scripts' );
-			// wp_dequeue_script( 'infinite-scroll' );
-			// wp_dequeue_script( 'iso' );
-			// wp_dequeue_script( 'images-loaded' );
 		}
 	}
 
@@ -94,7 +98,11 @@ class WPIG_ShortCode {
 	 * @return mixed
 	 */
 	public function style() {
-		ob_start();
+		// ob_start();
+
+		// if ( $this->style == 'style-3' ) {
+		// return '<style  type="text/css"></style>';
+		// }
 
 		$image_width = ( 100 / intval( $this->column ) ) . '%';
 		$neg_width   = ( intval( $this->column ) - 1 ) * intval( $this->gutter_size ) / intval( $this->column ) . 'px';
@@ -207,9 +215,9 @@ class WPIG_ShortCode {
 
 			include_once WPIGDIR . 'templates/design-1.php';
 
-			echo '<pre>';
-			print_r( $images );
-			echo '</pre>';
+			// echo '<pre>';
+			// print_r( $images );
+			// echo '</pre>';
 
 			$result = ob_get_clean();
 
