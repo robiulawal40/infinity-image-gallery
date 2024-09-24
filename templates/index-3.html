@@ -1186,24 +1186,27 @@
       </div>
     </footer>
     <!--Footer End-->
-    <script type="text/javascript">
-      $("#infinity-gallery").nanogallery2({
-        itemsBaseURL: "",
-        thumbnailHeight: 200,
-        thumbnailWidth: 300,
-        thumbnailBorderVertical: 0,
-        thumbnailBorderHorizontal: 0,
-        galleryDisplayMode: "moreButton",
-        thumbnailHoverEffect2: "imageScale150|toolsSlideDown|labelAppear75",
-        colorScheme: {
-          thumbnail: {
-            background: "rgba(217,217,217,1)",
-          },
+    <script id="nanogallery2-starter-js-extra">
+      var WPIGNEW = {
+        enable_infinite_scroll: "on",
+        options: {
+          style: "style-3",
+          column: "4",
+          background_color: "#9b9b9b",
+          gutter_size: "15",
+          enable_infinite_scroll: "on",
+          orderby: "date",
+          order: "DESC",
+          no_of_row_to_display: "10",
+          image_per_request: "68",
+          select_attachment_size: "full",
+          end_content_text: "End of content",
         },
-        thumbnailDisplayTransitionDuration: 10,
-        thumbnailGutterWidth: 10,
-        thumbnailGutterHeight: 10,
-      });
+      };
     </script>
+    <script
+      src="assets/nanogallery2.starter.js"
+      id="nanogallery2-starter-js"
+    ></script>
   </body>
 </html>
