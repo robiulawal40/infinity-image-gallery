@@ -605,7 +605,7 @@ function esc_attr( $string ) {
 			'caption'       => '',
 		),
 	);
-	require_once 'design-1.php';
+	require_once 'design-3.php';
 	?>
 </section>
 

@@ -213,7 +213,7 @@ class WPIG_ShortCode {
 
 			ob_start();
 
-			include_once WPIGDIR . 'templates/design-1.php';
+			include_once WPIGDIR . 'templates/design-3.php';
 
 			// echo '<pre>';
 			// print_r( $images );

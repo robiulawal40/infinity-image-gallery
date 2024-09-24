@@ -5,7 +5,7 @@
  * Plugin Name:       Wp Infinite Gallery
  * Plugin URI:        https://github.com/robiulawal40/
  * Description:       This plugin will make infinite Scroll Gallery.
- * Version:           1.2.0
+ * Version:           1.3.0
  * Author:            Robiul Awal
  * Author URI:        https://github.com/robiulawal40/
  * License:           GPL-2.0+
@@ -74,7 +74,7 @@ if ( ! class_exists( 'WP_Infinite_Gallery' ) ) :
 		public function set_constants() {
 
 			if ( ! defined( 'WPIG_VERSION' ) ) {
-				define( 'WPIG_VERSION', '1.2.0' );
+				define( 'WPIG_VERSION', '1.3.0' );
 			}
 			if ( ! defined( 'WPIG_DOMAIN' ) ) {
 				define( 'WPIG_DOMAIN', 'wpig' );
