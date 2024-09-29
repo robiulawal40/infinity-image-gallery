@@ -34,11 +34,11 @@
     "svn": "node svn.js",
     "wp": "cd .. && cd .. && wp-env start",
     "pot": "wp i18n make-pot C:/xampp/htdocs/wp-content/plugins/woosync-api-connector C:/xampp/htdocs/wp-content/plugins/woosync-api-connector/languages/woosync.pot --domain=woosync",
-    "reload:watch": "browser-sync start --proxy http://127.0.0.1:8000 --config bs-config-reloader.js",
+    "tailwind:watch": "tailwindcss -i ./tailwind.css -o ./templates/tailwind-style.css --watch --postcss --minify",
     "php:server": "php -S 127.0.0.1:8000 -t templates",
-    "dev:php": "concurrently --kill-others \"npm run php:server\" \"npm run reload:watch\" \"npm run tailwind:watch\" ",
-    "dev:npm-run-all": "npm-run-all --parallel php:server reload:watch",
-    "tailwind:watch": "tailwindcss -i ./tailwind.css -o ./templates/tailwind-style.css --watch --postcss --minify"
+    "reload:watch": "browser-sync start --proxy http://127.0.0.1:8000 --config bs-config-reloader.js",
+    "dev:php:reload": "npm-run-all --parallel php:server reload:watch",
+    "dev:php:reload:tailwind": "concurrently --kill-others \"npm run php:server\" \"npm run reload:watch\" \"npm run tailwind:watch\" "
   },
   "devDependencies": {
     "@wordpress/scripts": "^27.4.0",
