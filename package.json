@@ -31,6 +31,7 @@
     "plugin-zip": "wp-scripts plugin-zip",
     "git:remote": "git remote add origin https://github.com/robiulawal40/infinity-image-gallery.git",
     "git": "git add . && git commit -m \"regular update\" && git push origin master",
+    "git:pull": "git pull origin master",
     "svn": "node svn.js",
     "wp": "cd .. && cd .. && wp-env start",
     "pot": "wp i18n make-pot C:/xampp/htdocs/wp-content/plugins/woosync-api-connector C:/xampp/htdocs/wp-content/plugins/woosync-api-connector/languages/woosync.pot --domain=woosync",
