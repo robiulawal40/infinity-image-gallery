@@ -3,7 +3,7 @@
 Tags: gallery, photo Gallery, image gallery, responsive gallery, wordpress gallery plugin
 Requires at least: 4.6
 Tested up to: 6.6
-Stable tag: 1.3.0
+Stable tag: 1.4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,6 +42,8 @@ The Wordpress Infinite Gallery plugin allows you to create unlimited shortcode f
 [Style 1](https://robiulawal40.github.io/infinity-image-gallery/templates/index-1.html)
 [Style 2](https://robiulawal40.github.io/infinity-image-gallery/templates/index-2.html)
 [Style 3](https://robiulawal40.github.io/infinity-image-gallery/templates/index-3.html)
+[Justified Gallery (Style Four)](https://robiulawal40.github.io/infinity-image-gallery/templates/index-4.html)
+[Mosaic Gallery (Style Five)](https://robiulawal40.github.io/infinity-image-gallery/templates/index-4.html)
 
 ###IMPORTANT:
 Please visit our support section if you believe you have discovered a bug in Wordpress Infinite Gallery or if you have any problems or questions about the plugin.
@@ -108,6 +110,8 @@ The difficulty could be caused by the big quantity of images in the Wordpress In
 = 1.3.0 =
 *  New Style 3 Added.
 
+= 1.4.0 =
+*  New Style 4 and Style 5 Added.
 
 == Screenshots ==
 1.  Wordpress Infinite Gallery - Popup View
