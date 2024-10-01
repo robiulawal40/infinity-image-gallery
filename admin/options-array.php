@@ -15,6 +15,8 @@ $options = array(
 			'style-1' => 'Style One',
 			'style-2' => 'Style Two',
 			'style-3' => 'Style Three',
+			'style-4' => 'Justified Gallery (Style Four)',
+			'style-5' => 'Mosaic Gallery (Style Five)',
 		),
 	),
 	'column'                 => array(

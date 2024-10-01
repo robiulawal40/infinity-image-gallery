@@ -39,11 +39,7 @@ class WPIG_ShortCode {
 		$attachments = wpig_get_attachment_images( $args );
 		if ( $this->style == 'style-1' || $this->style == 'style-2' ) {
 			$attachments_html = $this->wpig_prepare_attachment_html( $attachments );
-		}
-
-		if ( $this->style == 'style-3' ) {
-			// Enqueue Only Scripts that will load on Footer
-
+		} else {
 			$attachments_html = $this->wpig_prepare_attachment_html_new( $attachments );
 		}
 
@@ -88,7 +84,7 @@ class WPIG_ShortCode {
 		if ( $this->style == 'style-2' ) {
 			wp_enqueue_script( 'wpig-scripts' );
 		}
-		if ( $this->style == 'style-3' ) {
+		if ( $this->style == 'style-3' || $this->style == 'style-4' || $this->style == 'style-5' ) {
 			wp_enqueue_script( 'nanogallery2-min' );
 			wp_enqueue_script( 'nanogallery2-starter' );
 		}
@@ -213,7 +209,10 @@ class WPIG_ShortCode {
 
 			ob_start();
 
-			include_once WPIGDIR . 'templates/design-3.php';
+			$file = WPIGDIR . 'templates/' . $this->style . '.php';
+			if ( file_exists( stream_resolve_include_path( $file ) ) ) {
+				include_once $file;
+			}
 
 			// echo '<pre>';
 			// print_r( $images );

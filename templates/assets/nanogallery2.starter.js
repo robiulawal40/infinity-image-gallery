@@ -44,14 +44,14 @@ $("#infinity-gallery.style-3").nanogallery2({
 
 $("#infinity-gallery.style-4").nanogallery2({
 	itemsBaseURL: "",
-	thumbnailHeight:  wpignew_get_value("thumbnail_height")?? 200,
-	thumbnailWidth:  wpignew_get_value("thumbnail_width")?? 300,
+	thumbnailHeight:  wpignew_get_value("thumbnail_height", 400),
+	thumbnailWidth:  "auto",
 	thumbnailBorderVertical: 0,
 	thumbnailBorderHorizontal: 0,
 	galleryDisplayMode: "pagination", //fullContent, moreButton, pagination, rows
 	galleryPaginationTopButtons:false,
 	galleryPaginationMode:"numbers",
-	galleryMaxRows: wpignew_get_value("no_of_row_to_display")?? 10,
+	galleryMaxRows: wpignew_get_value("no_of_row_to_display", 10)?? 10,
 	thumbnailAlignment: 'fillWidth',
 	thumbnailHoverEffect2: "imageScale150|toolsSlideDown|labelAppear75",
 	colorScheme: {
@@ -60,8 +60,8 @@ $("#infinity-gallery.style-4").nanogallery2({
 			}
 		},
 	"thumbnailDisplayTransitionDuration": 10,
-	"thumbnailGutterWidth": wpignew_get_value("gutter_size")??10,
-	"thumbnailGutterHeight":wpignew_get_value("gutter_size")??10,
+	"thumbnailGutterWidth": 10,
+	"thumbnailGutterHeight":10,
 });
 
 
