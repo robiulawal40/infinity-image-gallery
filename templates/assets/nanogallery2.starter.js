@@ -219,7 +219,7 @@ $("#infinity-gallery.style-7").nanogallery2({
 galleryDisplayMode: 'moreButton',
 galleryMaxRows: 3,
 galleryMaxItems: 15,
-gallerySorting: 'random',
+// gallerySorting: 'random',
 
 thumbnailHeight: '300 XS200 SM200',       // RESPONSIVE THUMBNAIL HEIGHT: default=300px, XS resolution=200px, SM resolution=200px
 thumbnailWidth: '300 XS180 SM200',        // RESPONSIVE THUMBNAIL WIDTH:  default=300px, XS resolution=180px, SM resolution=200px
@@ -232,7 +232,7 @@ thumbnailGutterWidth : '80 XS20 SM20' , thumbnailGutterHeight : '80 XS20 SM20',
 thumbnailLabel: { display: true, position: 'onBottom', align: 'left'},
 thumbnailToolbarImage :  { bottomLeft : 'display' },
 // replace the default DISPLAY tool icon
-icons: {thumbnailDisplay: '<i class="fa fa-long-arrow-right" aria-hidden="true"></i> display'},
+// icons: {thumbnailDisplay: '<i class="fa fa-long-arrow-right" aria-hidden="true"></i> More'},
 
 // DISPLAY ANIMATION
 galleryDisplayTransition: 'slideUp',
@@ -250,7 +250,7 @@ touchAutoOpenDelay: 800,
 
 // GALLERY THEME
 galleryTheme : { 
-	thumbnail: { borderRadius: '10px', background: '#fff', titleShadow : 'none', titleColor: '#000', labelBackground: '#ff0' },
+	thumbnail: { borderRadius: '10px', background: '#fff', titleShadow : 'none', titleColor: '#000', labelBackground: '#f00' },
 	thumbnailIcon: { color: '#000', shadow: 'none' },
 },
 
@@ -272,7 +272,7 @@ galleryFilterTagsMode: 'multiple',
 thumbnailHeight: '250', thumbnailWidth: '250',
 thumbnailAlignment: 'fillWidth',
 galleryDisplayMode: 'fullContent',
-gallerySorting: 'random',
+// gallerySorting: 'random',
 
 thumbnailGutterWidth: 10, thumbnailGutterHeight: 10,
 thumbnailBorderHorizontal: 2, thumbnailBorderVertical: 2,
@@ -350,7 +350,7 @@ $("#infinity-gallery.style-10").nanogallery2({
 galleryL1DisplayMode: 'fullContent',                // first level display mode -> fullContent
 galleryDisplayMode: 'rows',                         // other levels display mode -> 4 rows
 galleryMaxRows: 4,
-gallerySorting: 'random',
+// gallerySorting: 'random',
 
 // thumbnail on first gallery level
 thumbnailL1Height: 400, thumbnailL1Width: 600,      // first level -> grid kayout
@@ -372,7 +372,7 @@ thumbnailAlignment: 'fillWidth',
 thumbnailToolbarImage : null,
 thumbnailToolbarAlbum: null,
 // first level label
-<!-- thumbnailL1Label: { display: true, position:'overImageOnBottom', hideIcons: true, titleFontSize: '1em', align: 'center', titleMultiLine:true, displayDescription: false}, -->
+// <!-- thumbnailL1Label: { display: true, position:'overImageOnBottom', hideIcons: true, titleFontSize: '1em', align: 'center', titleMultiLine:true, displayDescription: false}, -->
 thumbnailL1Label: { display: true, valign:'bottom', hideIcons: true, titleFontSize: '3em', align: 'left', titleMultiLine:true, displayDescription: false},
 // other level label
 thumbnailLabel: { display: true, position:'overImageOnBottom', hideIcons: true, titleFontSize: '1em', align: 'center', titleMultiLine:true, displayDescription: false},
@@ -387,7 +387,7 @@ thumbnailDisplayInterval: 30,
 
 // THUMBNAIL'S HOVER ANIMATION
 // first level
-<!-- thumbnailL1BuildInit2: 'title_font-weight_bold|image_scale_0.8|label_left_-5px|label_text-transform_uppercase|label_top_95%|label_rotateZ_-90deg|label_transform-origin_top left', -->
+// <!-- thumbnailL1BuildInit2: 'title_font-weight_bold|image_scale_0.8|label_left_-5px|label_text-transform_uppercase|label_top_95%|label_rotateZ_-90deg|label_transform-origin_top left', -->
 thumbnailL1BuildInit2: 'title_font-weight_bold|image_scale_0.8|label_left_-25px|label_top_95%|label_rotateZ_-90deg|label_transform-origin_top left',
 thumbnailL1HoverEffect2: 'imageGrayOff|title_color_#46D6AB_#aaaaaa|labelOpacity50',
 // other levels -> no hover effect
@@ -410,22 +410,29 @@ $("#infinity-gallery.style-11").nanogallery2({
 	itemsBaseURL: "",
  // CONTENT SOURCE
  items:[
-	{
-		src:          'https://vimeo.com/32875422',                           // media url
-		srct:         'https://i.vimeocdn.com/video/222726041_1280x720.jpg',  // media thumbnail url
-		title:        'Vimeo video',                                          // media title
-	},
-	{ src: 'https://www.youtube.com/watch?v=i5qOzqD9Rms', title: 'Youtube video' },
-	{ src: 'https://www.dailymotion.com/video/x7shbov',   title: 'Dailymotion video' },
-	{ src: 'berlin1.jpg',      srct: 'berlin1t.jpg',   title: 'Self hosted image' },
-	{ src: 'berlin2.jpg',      srct: 'berlin2t.jpg',   title: 'Self hosted image' },
-	{ src: 'berlin3.jpg',      srct: 'berlin3t.jpg',   title: 'Self hosted image' }
+	// {
+	// 	src:          'https://vimeo.com/32875422',                           
+	// 	srct:         'https://i.vimeocdn.com/video/222726041_1280x720.jpg',  
+	// 	title:        'Vimeo video',                                          
+	// },
+	// { src: 'https://www.dailymotion.com/video/x7shbov',   title: 'Dailymotion video' }
+	{ src: 'https://www.youtube.com/watch?v=cQfo0HJhCnE' },
+	{ src: 'hhttps://www.youtube.com/watch?v=HHGIRpaFgCs' },
+	{ src: 'https://www.youtube.com/watch?v=hDZ7y8RP5HE' },
+	{ src: 'https://www.youtube.com/watch?v=i5qOzqD9Rms' },
+	{ src: 'https://www.youtube.com/watch?v=tF_flTAwDbQ' },
+	{ src: 'https://www.youtube.com/watch?v=TbiPcMCz0Ek' },
+	{ src: 'https://www.youtube.com/watch?v=IeFWNtMo1Fs' },
+	{ src: 'https://www.youtube.com/watch?v=cVTR7k9K0Vc' },
+	{ src: 'https://www.youtube.com/watch?v=bKh2G73gCCs' },
+	{ src: 'https://www.youtube.com/watch?v=XnuDetmX9lU' },
+	{ src: 'https://www.youtube.com/watch?v=TpM6CT637jo' },
+	{ src: 'https://www.youtube.com/watch?v=1NT7_RD6RNw' },
 ],
-itemsBaseURL:    'https://nanogallery2.nanostudio.org/samples/',
 
 // GALLERY AND THUMBNAIL LAYOUT
 galleryDisplayMode: 'fullContent',
-gallerySorting: 'random',
+// gallerySorting: 'random',
 
 
 // thumbnail
