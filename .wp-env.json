@@ -1,0 +1,9 @@
+{
+  "core": "C:\\Users\\DELL\\Downloads\\wordpress-6.6.2.zip",
+  "plugins": ["."],
+  "port": 1000,
+  "testsPort": 1001,
+  "config": {
+    "WP_DEBUG_DISPLAY": true
+  }
+}
