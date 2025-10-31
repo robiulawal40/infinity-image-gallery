@@ -11,7 +11,7 @@ if ( isset( $images ) && is_array( $images ) ) {
 	// echo '</pre>';
 
 	?>
-	<div id="infinity-gallery" class="">
+	<div id="infinity-gallery" class="style-5">
 		<?php
 		foreach ( $images as $i => $image ) {
 			echo prepare_image_html( $image );

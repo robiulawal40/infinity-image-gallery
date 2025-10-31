@@ -13,7 +13,7 @@
 <!--Header Start-->
 <header class="bg-slate-50 mb-10">
 	<div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
-	<a class="block text-teal-600" href="#">
+	<a class="block text-teal-600" href="http://localhost:3000/">
 		<span class="sr-only">Home</span>
 		<svg class="h-8" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<path
@@ -27,28 +27,21 @@
 		<nav aria-label="Global" class="hidden md:block">
 		<ul class="flex items-center gap-6 text-sm">
 			<li>
-			<a class="text-gray-500 transition hover:text-gray-500/75" href="#"> About </a>
+			<a class="text-gray-500 transition hover:text-gray-500/75" href="/index-3.html"> Style 3 </a>
+			</li>
+			<li>
+			<a class="text-gray-500 transition hover:text-gray-500/75" href="/index-4.html"> Style 4 </a>
+			</li>
+			<li>
+			<a class="text-gray-500 transition hover:text-gray-500/75" href="/index-5.html"> Style 5 </a>
+			</li>
+			<li>
+			<a class="text-gray-500 transition hover:text-gray-500/75" href="/index-6.html"> Style 6 </a>
+			</li>
+			<li>
+			<a class="text-gray-500 transition hover:text-gray-500/75" href="/index-7.html"> Style 7 </a>
 			</li>
 
-			<li>
-			<a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Careers </a>
-			</li>
-
-			<li>
-			<a class="text-gray-500 transition hover:text-gray-500/75" href="#"> History </a>
-			</li>
-
-			<li>
-			<a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Services </a>
-			</li>
-
-			<li>
-			<a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Projects </a>
-			</li>
-
-			<li>
-			<a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Blog </a>
-			</li>
 		</ul>
 		</nav>
 
@@ -605,7 +598,7 @@ function esc_attr( $string ) {
 			'caption'       => '',
 		),
 	);
-	require_once 'design-3.php';
+	require_once 'style-3.php';
 	?>
 </section>
 
